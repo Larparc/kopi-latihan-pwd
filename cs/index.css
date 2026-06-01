@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    background-color: wheat;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #4e1111;
+    color: white;
+}
+.head {
+    padding-top: 38px;
+}
+p {
+    padding-bottom: 38px;
+}
+section {
+    margin: 28px;
+}
+
