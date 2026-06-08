@@ -13,6 +13,7 @@ $username = $_SESSION['username'];
 <section class="dashboard">
 <p class="dashboard-p">welcome, <?= $username ?></p>
 <a href='../courses/index.php' class="dashboard-a">Management Kelas</a>
+<a href='registrations/index.php' class="dashboard-a">Management pendaftaran</a>
 <br>
 <a href='logout.php' class="dashboard-ah">Logout</a>
 </section>

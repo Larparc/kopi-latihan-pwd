@@ -26,5 +26,7 @@ include "header.php";
           ?>
         </div>
     </div>
+
+    <?php include "frm_pendaftaran.php"; ?>
 </body>
 </html>

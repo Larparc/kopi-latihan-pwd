@@ -22,11 +22,11 @@ $query = mysqli_query($conn, $sql);
     <table class="tabel">
         <thead>
             <tr>
-                <th>No</th>
+                <th style="text-align:center">No</th>
                 <th>Nama Kelas</th>
                 <th>Deskripsi</th>
-                <th>Harga</th>
-                <th>Aksi</th>
+                <th style="text-align:center">Harga</th>
+                <th style="text-align:center">Aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -40,11 +40,11 @@ $query = mysqli_query($conn, $sql);
                 $price       = number_format($result['price'], 0, ',', '.');
             ?>
             <tr>
-                <td><?= $no ?></td>
+                <td style="text-align:center"><?= $no ?></td>
                 <td><?= $name ?></td>
                 <td><?= $description ?></td>
-                <td>Rp <?= $price ?></td>
-                <td class="aksi">
+                <td style="text-align:center">Rp <?= $price ?></td>
+                <td class="aksi" style="text-align:center">
                     <a href="#" class="edit">Edit</a>
                     <a href="#" class="hapus">Delete</a>
                 </td>

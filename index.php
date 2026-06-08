@@ -36,5 +36,7 @@ include "koneksi.php"
           }
           ?>
     </div>
+
+    <?php include "frm_pendaftaran.php"; ?>
 </body>
 </html>
