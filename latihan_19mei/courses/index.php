@@ -5,9 +5,8 @@ include "../koneksi.php";
 $sql = "select * from courses";
 $query = mysqli_query($conn, $sql);
 ?>
-<!DOCTYPE html>
-<html lang="id">
-<head>  
+<!DOCTYPE html> 
+<head>
     <title>Management Kelas</title>
     <link rel="stylesheet" href="/pwd/latihan_19mei/cs/index.css">
 </head>
@@ -16,6 +15,8 @@ $query = mysqli_query($conn, $sql);
 <div class="wrap">
     <div class="top">
         <h2>Management Kelas</h2>
+        <a href="../admin/dashboard.php" class="btn-out">Kembali ke Dashboard</a>
+        <a href="tambah.php" class="btn-out">Tambah Course</a>
         <a href="../admin/logout.php" class="btn-out">Logout</a>
     </div>
 
@@ -35,8 +36,9 @@ $query = mysqli_query($conn, $sql);
             $hasData = false;
             while ($result = mysqli_fetch_array($query)) {
                 $hasData = true;
-                $name        = htmlspecialchars($result['name']);
-                $description = htmlspecialchars($result['description']);
+                $id          = $result['id'];
+                $name        = $result['name'];
+                $description = $result['description'];
                 $price       = number_format($result['price'], 0, ',', '.');
             ?>
             <tr>
@@ -45,8 +47,8 @@ $query = mysqli_query($conn, $sql);
                 <td><?= $description ?></td>
                 <td style="text-align:center">Rp <?= $price ?></td>
                 <td class="aksi" style="text-align:center">
-                    <a href="#" class="edit">Edit</a>
-                    <a href="#" class="hapus">Delete</a>
+                    <a href="edit.php?id=<?= $id ?>" class="edit">Edit</a> |
+                    <a href="hapus.php?id=<?= $id ?>" onclick="return confirm('Yakin ingin menghapus data ini?')" class="hapus">Hapus</a>
                 </td>
             </tr>
             <?php
